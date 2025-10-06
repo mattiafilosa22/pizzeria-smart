@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+  # Database MySQL
+  db:
+    image: mysql:8.0
+    container_name: pizzeria_egidio_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: pizzeria_egidio
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress_password
+      MYSQL_ROOT_PASSWORD: root_password
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - pizzeria_network
+    ports:
+      - "3306:3306"
+
+  # WordPress
+  wordpress:
+    image: wordpress:6.8.3-php8.1-apache
+    container_name: pizzeria_egidio_wordpress
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress_password
+      WORDPRESS_DB_NAME: pizzeria_egidio
+      WORDPRESS_TABLE_PREFIX: wp_
+    volumes:
+      - wordpress_data:/var/www/html
+      - ./wp-content:/var/www/html/wp-content
+    depends_on:
+      - db
+    networks:
+      - pizzeria_network
+
+  # phpMyAdmin per gestione database
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: pizzeria_egidio_phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: root_password
+      MYSQL_ROOT_PASSWORD: root_password
+    depends_on:
+      - db
+    networks:
+      - pizzeria_network
+
+volumes:
+  db_data:
+    driver: local
+  wordpress_data:
+    driver: local
+
+networks:
+  pizzeria_network:
+    driver: bridge
