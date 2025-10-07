@@ -10,27 +10,24 @@
                     <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
                 </div>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Contatti</h3>
                 <div class="contact-item">
-                    <i class="fas fa-map-marker-alt contact-icon"></i>
                     <span><?php echo esc_html(get_theme_mod('contact_address', 'Via Roma 123, 57025 Piombino (LI)')); ?></span>
                 </div>
                 <div class="contact-item">
-                    <i class="fas fa-phone contact-icon"></i>
                     <a href="tel:<?php echo esc_attr(str_replace(' ', '', get_theme_mod('contact_phone', '+39 0565 123456'))); ?>">
                         <?php echo esc_html(get_theme_mod('contact_phone', '+39 0565 123456')); ?>
                     </a>
                 </div>
                 <div class="contact-item">
-                    <i class="fas fa-envelope contact-icon"></i>
                     <a href="mailto:<?php echo esc_attr(get_theme_mod('contact_email', 'info@pizzeriaegidio.it')); ?>">
                         <?php echo esc_html(get_theme_mod('contact_email', 'info@pizzeriaegidio.it')); ?>
                     </a>
                 </div>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Orari di Apertura</h3>
                 <div class="opening-hours">
@@ -40,7 +37,7 @@
                     ?>
                 </div>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Menu Rapido</h3>
                 <?php
@@ -53,7 +50,7 @@
                 ?>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <p>&copy; <?php echo date('Y'); ?> Pizzeria Egidio. Tutti i diritti riservati. | Tema sviluppato da <a href="#" target="_blank">Mattia Filosa</a></p>
         </div>
@@ -67,7 +64,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const mobileToggle = document.getElementById('mobile-menu-toggle');
     const mainNav = document.getElementById('main-nav');
-    
+
     if (mobileToggle && mainNav) {
         mobileToggle.addEventListener('click', function() {
             mainNav.classList.toggle('active');
@@ -81,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     // Header scroll effect
     const header = document.getElementById('site-header');
     if (header) {
@@ -95,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

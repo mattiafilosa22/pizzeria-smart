@@ -525,6 +525,35 @@ h4 {
     display: flex;
     align-items: center;
     margin-bottom: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.contact-item:hover::before {
+    left: 100%;
+}
+
+.contact-item:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--primary-color);
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
 }
 
 .contact-item:last-child {
@@ -534,17 +563,58 @@ h4 {
 .contact-icon {
     color: var(--primary-color);
     font-size: 1.5rem;
-    margin-right: var(--spacing-sm);
-    width: 30px;
+    margin-right: var(--spacing-md);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 175, 55, 0.15);
+    border-radius: 50%;
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+}
+
+.contact-item:hover .contact-icon {
+    background: var(--primary-color);
+    color: var(--dark-color);
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.contact-item-text {
+    position: relative;
+    z-index: 1;
+    flex: 1;
 }
 
 .contact-item a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
 }
 
-.contact-item a:hover {
+.contact-item a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.contact-item:hover a {
     color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.contact-item:hover a::after {
+    width: 100%;
 }
 
 /* Map */
