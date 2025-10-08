@@ -2,12 +2,20 @@
 
 ## ⚡ Avvio Veloce
 
+**Linux/macOS:**
 ```bash
-# Primo avvio (inizializza il DB con backup.sql)
 ./start-project.sh
+```
 
-# Avvio normale
+**Windows:**
+```batch
+start-project.bat
+```
+
+**Avvio manuale (tutti i sistemi):**
+```bash
 docker-compose up -d
+# oppure: docker compose up -d
 ```
 
 ## 📍 URL Servizi

@@ -18,13 +18,26 @@ Questo progetto utilizza Docker Compose per eseguire WordPress 6.8.3 con MySQL e
 1. Clona o scarica il progetto
 2. Posizionati nella directory del progetto
 3. **Avvio automatico con script** (raccomandato):
+
+   **Su Linux/macOS:**
    ```bash
    ./start-project.sh
+   ```
+   
+   **Su Windows:**
+   ```batch
+   # Opzione 1: File batch (più semplice)
+   start-project.bat
+   
+   # Opzione 2: PowerShell (più avanzato)
+   .\start-project.ps1
    ```
 
 4. **Avvio manuale**:
    ```bash
    docker-compose up -d
+   # oppure su sistemi più recenti:
+   docker compose up -d
    ```
 
 ## Accesso ai Servizi
