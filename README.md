@@ -17,11 +17,15 @@ Questo progetto utilizza Docker Compose per eseguire WordPress 6.8.3 con MySQL e
 
 1. Clona o scarica il progetto
 2. Posizionati nella directory del progetto
-3. Avvia i container:
+3. **Avvio automatico con script** (raccomandato):
+   ```bash
+   ./start-project.sh
+   ```
 
-```bash
-docker-compose up -d
-```
+4. **Avvio manuale**:
+   ```bash
+   docker-compose up -d
+   ```
 
 ## Accesso ai Servizi
 
@@ -37,6 +41,15 @@ Il database viene creato automaticamente con le seguenti credenziali:
 - Database: pizzeria_egidio
 - Username: wordpress
 - Password: wordpress_password
+
+### Inizializzazione Automatica del Database
+
+Al primo avvio, il database verrà automaticamente popolato con i dati dal file `backup.sql`. Questo significa che:
+
+1. **Primo avvio**: Il database viene creato e popolato con tutti i dati esistenti
+2. **Avvii successivi**: Il database mantiene lo stato esistente
+
+⚠️ **Nota**: L'inizializzazione automatica avviene solo se il volume del database è vuoto. Per reinizializzare il database, è necessario rimuovere il volume esistente (vedi sezione "Reset completo").
 
 ## Comandi Utili
 

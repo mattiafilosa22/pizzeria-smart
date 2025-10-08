@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   # Database MySQL
   db:
@@ -13,6 +11,7 @@ services:
       MYSQL_ROOT_PASSWORD: root_password
     volumes:
       - db_data:/var/lib/mysql
+      - ./backup.sql:/docker-entrypoint-initdb.d/backup.sql:ro
     networks:
       - pizzeria_network
     ports:
