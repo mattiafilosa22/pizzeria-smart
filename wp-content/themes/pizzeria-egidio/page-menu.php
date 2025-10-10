@@ -6,7 +6,7 @@ get_header(); ?>
 
 <main class="main-content">
     <?php pizzeria_egidio_breadcrumbs(); ?>
-    
+
     <section class="section">
         <div class="container">
             <div class="text-center mb-4 fade-in-up">
@@ -24,42 +24,62 @@ get_header(); ?>
                 'taxonomy' => 'pizza_category',
                 'hide_empty' => false,
             ));
+            ?>
+            <div class="accordion" id="accordionExample">
 
-            if (!empty($pizza_categories) && !is_wp_error($pizza_categories)) :
-                foreach ($pizza_categories as $category) :
-                    $pizzas = pizzeria_egidio_get_pizzas($category->slug);
-                    if ($pizzas->have_posts()) :
-            ?>
-                        <div class="menu-category fade-in-up">
-                            <h2><?php echo esc_html($category->name); ?></h2>
-                            <?php if ($category->description) : ?>
-                                <p class="category-description"><?php echo esc_html($category->description); ?></p>
+                <?php if (!empty($pizza_categories) && !is_wp_error($pizza_categories)) :
+                    foreach ($pizza_categories as $category) :
+                        $pizzas = pizzeria_egidio_get_pizzas($category->slug);
+                        if ($pizzas->have_posts()) :
+                ?>
+                            <div class="accordion-item menu-category fade-in-up">
+    <h2 class="accordion-header" id="heading-<?php echo esc_attr($category->term_id); ?>">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse-<?php echo esc_attr($category->term_id); ?>"
+            aria-expanded="false" aria-controls="collapse-<?php echo esc_attr($category->term_id); ?>">
+            <?php echo esc_html($category->name); ?>
+        </button>
+    </h2>
+
+    <div id="collapse-<?php echo esc_attr($category->term_id); ?>" class="accordion-collapse collapse"
+        aria-labelledby="heading-<?php echo esc_attr($category->term_id); ?>" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            
+            <?php if ($category->description) : ?>
+                <p class="category-description"><?php echo esc_html($category->description); ?></p>
+            <?php endif; ?>
+
+            <div class="menu-items">
+                <?php while ($pizzas->have_posts()) : $pizzas->the_post(); ?>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4><?php the_title(); ?></h4>
+                            <?php if (get_the_excerpt()) : ?>
+                                <p class="menu-item-description"><?php echo get_the_excerpt(); ?></p>
                             <?php endif; ?>
-                            
-                            <div class="menu-items">
-                                <?php while ($pizzas->have_posts()) : $pizzas->the_post(); ?>
-                                    <div class="menu-item">
-                                        <div class="menu-item-info">
-                                            <h4><?php the_title(); ?></h4>
-                                            <?php if (get_the_excerpt()) : ?>
-                                                <p class="menu-item-description"><?php echo get_the_excerpt(); ?></p>
-                                            <?php endif; ?>
-                                            <p class="menu-item-ingredients"><?php echo esc_html(pizzeria_egidio_get_pizza_ingredients(get_the_ID())); ?></p>
-                                        </div>
-                                        <div class="menu-item-price">
-                                            <?php echo pizzeria_egidio_get_pizza_price(get_the_ID()); ?>
-                                        </div>
-                                    </div>
-                                <?php endwhile; ?>
-                            </div>
+                            <p class="menu-item-ingredients">
+                                <?php echo esc_html(pizzeria_egidio_get_pizza_ingredients(get_the_ID())); ?>
+                            </p>
                         </div>
-            <?php
-                        wp_reset_postdata();
-                    endif;
-                endforeach;
-            else :
-                // Menu di fallback se non ci sono categorie definite
-            ?>
+                        <div class="menu-item-price">
+                            <?php echo pizzeria_egidio_get_pizza_price(get_the_ID()); ?>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+
+        </div> <!-- fine accordion-body -->
+    </div> <!-- fine accordion-collapse -->
+</div> <!-- fine accordion-item -->
+
+                <?php
+                            wp_reset_postdata();
+                        endif;
+                    endforeach;
+                else :
+                    // Menu di fallback se non ci sono categorie definite
+                ?>
+            </div>
                 <div class="menu-category fade-in-up">
                     <h2>Le Nostre Pizze Classiche</h2>
                     <div class="menu-items">
@@ -71,7 +91,7 @@ get_header(); ?>
                             </div>
                             <div class="menu-item-price">10 €</div>
                         </div>
-                        
+
                         <div class="menu-item">
                             <div class="menu-item-info">
                                 <h4>Marinara</h4>
@@ -80,7 +100,7 @@ get_header(); ?>
                             </div>
                             <div class="menu-item-price">8 €</div>
                         </div>
-                        
+
                         <div class="menu-item">
                             <div class="menu-item-info">
                                 <h4>Napoli</h4>
@@ -89,7 +109,7 @@ get_header(); ?>
                             </div>
                             <div class="menu-item-price">13 €</div>
                         </div>
-                        
+
                         <div class="menu-item">
                             <div class="menu-item-info">
                                 <h4>Prosciutto e Funghi</h4>
@@ -112,7 +132,7 @@ get_header(); ?>
                             </div>
                             <div class="menu-item-price">18 €</div>
                         </div>
-                        
+
                         <div class="menu-item">
                             <div class="menu-item-info">
                                 <h4>Mediterranea</h4>
@@ -121,7 +141,7 @@ get_header(); ?>
                             </div>
                             <div class="menu-item-price">15 €</div>
                         </div>
-                        
+
                         <div class="menu-item">
                             <div class="menu-item-info">
                                 <h4>Toscana</h4>
@@ -130,7 +150,7 @@ get_header(); ?>
                             </div>
                             <div class="menu-item-price">16 €</div>
                         </div>
-                        
+
                         <div class="menu-item">
                             <div class="menu-item-info">
                                 <h4>Bufalina</h4>
@@ -153,7 +173,7 @@ get_header(); ?>
                             </div>
                             <div class="menu-item-price">14 €</div>
                         </div>
-                        
+
                         <div class="menu-item">
                             <div class="menu-item-info">
                                 <h4>Bruschette della Casa</h4>
@@ -176,7 +196,7 @@ get_header(); ?>
                             </div>
                             <div class="menu-item-price">4 € - 6 €</div>
                         </div>
-                        
+
                         <div class="menu-item">
                             <div class="menu-item-info">
                                 <h4>Vino della Casa</h4>
@@ -185,7 +205,7 @@ get_header(); ?>
                             </div>
                             <div class="menu-item-price">4 € - 18 €</div>
                         </div>
-                        
+
                         <div class="menu-item">
                             <div class="menu-item-info">
                                 <h4>Bibite</h4>
@@ -208,7 +228,7 @@ get_header(); ?>
                             </div>
                             <div class="menu-item-price">6 €</div>
                         </div>
-                        
+
                         <div class="menu-item">
                             <div class="menu-item-info">
                                 <h4>Panna Cotta ai Frutti di Bosco</h4>

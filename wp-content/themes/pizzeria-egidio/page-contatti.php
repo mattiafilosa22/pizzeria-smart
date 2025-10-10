@@ -225,7 +225,7 @@ get_header(); ?>
 }
 
 .hours-note {
-    background: var(--light-color);
+    background: var(--white);
     padding: 1rem;
     border-radius: var(--border-radius);
     margin-top: 1rem;
