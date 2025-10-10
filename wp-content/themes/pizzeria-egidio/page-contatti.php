@@ -154,6 +154,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -272,7 +273,7 @@ get_header(); ?>
 }
 
 .reservation-highlight {
-    background: var(--light-color);
+    background: var(--white);
     padding: 2rem;
     border-radius: var(--border-radius);
     text-align: center;
