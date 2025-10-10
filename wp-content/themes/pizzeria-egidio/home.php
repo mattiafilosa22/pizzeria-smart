@@ -2,7 +2,7 @@
 
 <main class="main-content">
     <?php pizzeria_egidio_breadcrumbs(); ?>
-    
+
     <section class="section">
         <div class="container">
             <?php if (have_posts()) : ?>
@@ -10,7 +10,7 @@
                     <h1>Blog</h1>
                     <p class="lead">Le ultime novità dalla Pizzeria Egidio</p>
                 </div>
-                
+
                 <div class="posts-grid grid grid-2">
                     <?php while (have_posts()) : the_post(); ?>
                         <article class="post-card card fade-in-up">
@@ -19,7 +19,7 @@
                                     <img src="<?php the_post_thumbnail_url('card-image'); ?>" alt="<?php the_title_attribute(); ?>" class="card-image">
                                 </a>
                             <?php endif; ?>
-                            
+
                             <div class="card-content">
                                 <header class="post-header">
                                     <h2 class="card-title">
@@ -31,11 +31,11 @@
                                         <span class="post-author"><?php the_author(); ?></span>
                                     </div>
                                 </header>
-                                
+
                                 <div class="post-excerpt">
                                     <?php the_excerpt(); ?>
                                 </div>
-                                
+
                                 <footer class="post-footer">
                                     <a href="<?php the_permalink(); ?>" class="btn btn-secondary">Leggi tutto</a>
                                 </footer>
@@ -43,7 +43,7 @@
                         </article>
                     <?php endwhile; ?>
                 </div>
-                
+
                 <div class="pagination-wrapper text-center">
                     <?php
                     the_posts_pagination(array(
@@ -52,11 +52,11 @@
                     ));
                     ?>
                 </div>
-                
+
             <?php else : ?>
                 <div class="no-posts text-center fade-in-up">
                     <h2>Nessun articolo trovato</h2>
-                    <p>Non ci sono ancora articoli pubblicati.</p>
+                    <p class="lead">Non ci sono ancora articoli pubblicati.</p>
                     <a href="<?php echo home_url(); ?>" class="btn btn-primary">Torna alla Home</a>
                 </div>
             <?php endif; ?>

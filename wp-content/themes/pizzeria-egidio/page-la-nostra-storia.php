@@ -37,13 +37,13 @@ get_header(); ?>
                         <p class="lead">La nostra filosofia unisce il meglio della tradizione con le più moderne tecniche di panificazione. Abbiamo mantenuto lo spirito originale di Egidio - l'attenzione alla qualità e il calore dell'accoglienza italiana - arricchendolo con:</p>
 
                         <div class="story-features">
-                            <p><i class="bi bi-flower2 text-primary"></i> <strong>Ricerca delle materie prime</strong><br /> Selezioniamo personalmente ogni ingrediente, privilegiando fornitori locali e prodotti a km zero</p>
-                            <p><i class="bi bi-clock text-primary"></i> <strong>Impasto innovativo</strong><br /> 72 ore di lievitazione naturale per una pizza più digeribile e saporita</p>
-                            <p><i class="bi bi-house text-primary"></i> <strong>Ambiente rinnovato</strong><br /> Un locale moderno che mantiene il calore dell'accoglienza tradizionale</p>
-                            <p><i class="bi bi-heart text-primary"></i> <strong>Passione familiare</strong><br /> Ogni pizza è preparata con la stessa dedizione che Egidio metteva nel suo lavoro</p>
+                            <p class="lead"><i class="bi bi-flower2 text-primary"></i> <strong>Ricerca delle materie prime</strong><br /> Selezioniamo personalmente ogni ingrediente, privilegiando fornitori locali e prodotti a km zero</p>
+                            <p class="lead"><i class="bi bi-clock text-primary"></i> <strong>Impasto innovativo</strong><br /> 72 ore di lievitazione naturale per una pizza più digeribile e saporita</p>
+                            <p class="lead"><i class="bi bi-house text-primary"></i> <strong>Ambiente rinnovato</strong><br /> Un locale moderno che mantiene il calore dell'accoglienza tradizionale</p>
+                            <p class="lead"><i class="bi bi-heart text-primary"></i> <strong>Passione familiare</strong><br /> Ogni pizza è preparata con la stessa dedizione che Egidio metteva nel suo lavoro</p>
                         </div>
 
-                        <p>Il risultato è una pizzeria che onora il passato guardando al futuro, dove ogni boccone racconta una storia di passione e qualità che attraversa le generazioni.</p>
+                        <p class="lead">Il risultato è una pizzeria che onora il passato guardando al futuro, dove ogni boccone racconta una storia di passione e qualità che attraversa le generazioni.</p>
                     </div>
                     <div class="pizza-special-image">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/locale-moderno.jpg" alt="Il nostro locale oggi" />
@@ -54,7 +54,7 @@ get_header(); ?>
                     <div class="text-center fade-in-up">
                         <h2 class="text-primary">La nostra promessa</h2>
                         <p class="lead">Ogni pizza che serviamo è un ponte tra passato e presente</p>
-                        <p>Manteniamo viva la tradizione di Egidio attraverso l'innovazione, garantendo che ogni cliente possa gustare non solo una pizza eccellente, ma anche un pezzo di storia piombinese. La nostra mission è semplice: onorare il passato creando nuovi ricordi indimenticabili.</p>
+                        <p class="lead">Manteniamo viva la tradizione di Egidio attraverso l'innovazione, garantendo che ogni cliente possa gustare non solo una pizza eccellente, ma anche un pezzo di storia piombinese. La nostra mission è semplice: onorare il passato creando nuovi ricordi indimenticabili.</p>
 
                         <div style="margin-top: 2rem;">
                             <a href="<?php echo esc_url(home_url('/menu/')); ?>" class="btn btn-primary btn-large">Scopri le Nostre Pizze</a>

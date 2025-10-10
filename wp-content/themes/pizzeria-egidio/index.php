@@ -28,9 +28,9 @@ get_header(); ?>
     <section class="section">
         <div class="container">
             <div class="about-teaser text-center fade-in-up">
-                <h2>Tradizione nel nome, innovazione nel piatto</h2>
+                <h2>Tradizione nel nome.<span class="text-primary"><br />innovazione nel piatto</span></h2>
                 <p class="lead">C'era una volta Egidio, un nome che ha fatto la storia della ristorazione piombinese. Oggi portiamo avanti questa tradizione con una visione moderna: ingredienti selezionati, impasto a lunga lievitazione e un'atmosfera unica nel cuore di Piombino.</p>
-                <p class="second-lead">Ogni pizza racconta una storia di passione, qualità e innovazione. Scopri il nostro viaggio dalle origini storiche alla moderna eccellenza culinaria.</p>
+                <p>Ogni pizza racconta una storia di passione, qualità e innovazione. Scopri il nostro viaggio dalle origini storiche alla moderna eccellenza culinaria.</p>
                 <a href="<?php echo esc_url(home_url('/la-nostra-storia/')); ?>" class="btn btn-primary">La Nostra Storia Completa</a>
             </div>
         </div>

@@ -3,7 +3,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Pizzeria Egidio</h3>
-                <p>Nel cuore di Piombino, dove la tradizione incontra l'innovazione per offrirti la pizza più buona e digeribile della città.</p>
+                <p class="lead">Nel cuore di Piombino, dove la tradizione incontra l'innovazione per offrirti la pizza più buona e digeribile della città.</p>
                 <div class="social-links">
                     <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                     <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
@@ -52,7 +52,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; <?php echo date('Y'); ?> Pizzeria Egidio. Tutti i diritti riservati. | Tema sviluppato da Mattia Filosa</p>
+            <p class="lead">&copy; <?php echo date('Y'); ?> Pizzeria Egidio. Tutti i diritti riservati. | Tema sviluppato da Mattia Filosa</p>
         </div>
     </div>
 </footer>

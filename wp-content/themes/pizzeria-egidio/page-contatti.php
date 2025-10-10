@@ -30,14 +30,14 @@ get_header(); ?>
                         <p class="contact-address">
                             <strong><?php echo esc_html(get_theme_mod('contact_address', 'Via Roma 123, 57025 Piombino (LI)')); ?></strong>
                         </p>
-                        <p>Nel cuore del centro storico di Piombino, a pochi passi dalle principali attrazioni della città. Il nostro locale è facilmente raggiungibile a piedi e dispone di parcheggi nelle vicinanze.</p>
+                        <p class="lead">Nel cuore del centro storico di Piombino, a pochi passi dalle principali attrazioni della città. Il nostro locale è facilmente raggiungibile a piedi e dispone di parcheggi nelle vicinanze.</p>
 
                         <div class="contact-directions">
                             <h4>Come Raggiungerci:</h4>
                             <div>
-                                <p><i class="bi bi-car-front text-primary"></i> <strong>In auto</strong><br /> Parcheggi pubblici a 100m dal locale</p>
-                                <p><i class="bi bi-bus-front text-primary"></i> <strong>Con i mezzi</strong><br /> Fermata autobus linea urbana "Centro"</p>
-                                <p><i class="bi bi-person-walking text-primary"></i> <strong>A piedi</strong><br /> Nel centro pedonale di Piombino</p>
+                                <p class="lead"><i class="bi bi-car-front text-primary"></i> <strong>In auto</strong><br /> Parcheggi pubblici a 100m dal locale</p>
+                                <p class="lead"><i class="bi bi-bus-front text-primary"></i> <strong>Con i mezzi</strong><br /> Fermata autobus linea urbana "Centro"</p>
+                                <p class="lead"><i class="bi bi-person-walking text-primary"></i> <strong>A piedi</strong><br /> Nel centro pedonale di Piombino</p>
                             </div>
                         </div>
                     </div>

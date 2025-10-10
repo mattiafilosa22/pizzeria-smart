@@ -59,6 +59,17 @@ body {
     font-size: 16px;
 }
 
+/* Paragrafi - assicurarsi che usino Montserrat (var--font-secondary) */
+p, p.lead {
+    font-family: var(--font-secondary)!important;
+    font-size: 1.1rem;
+    font-weight: 300;;
+}
+
+p.lead strong, p strong {
+    font-weight: 700;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-primary);
     font-weight: 400;
@@ -68,14 +79,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 3.5rem; 
+    font-size: 3.5rem;
     margin-bottom: var(--spacing-md);
     background-color: var(--primary-color);
     color: var(--white);
 }
 
 h2 {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     margin-bottom: var(--spacing-md);
 }
 
@@ -85,6 +96,10 @@ h3 {
 
 h4 {
     font-size: 1.8rem;
+}
+
+small {
+    font-weight: 300;
 }
 
 .accent-font {
@@ -252,6 +267,7 @@ h4 {
     margin-bottom: var(--spacing-sm);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     background: none;
+    margin: 0;
 }
 
 .hero-buttons {
@@ -262,9 +278,14 @@ h4 {
 }
 
 .hero-tagline {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-bottom: var(--spacing-lg);
     opacity: 0.9;
+}
+
+.hero-description {
+    font-size: 1.3rem;
+    margin: 2rem;
 }
 
 /* Buttons */
@@ -380,7 +401,6 @@ h4 {
 }
 
 .about-teaser h2 {
-    color: var(--primary-color);
     margin-bottom: var(--spacing-md);
 }
 
@@ -407,6 +427,7 @@ h4 {
     position: relative;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
+    font-weight: 300;
 }
 
 .pizza-features li:hover {
@@ -531,7 +552,7 @@ h4 {
     background-color: var(--light-color);
 }
 
-.accordion-button:not(.collapsed) { 
+.accordion-button:not(.collapsed) {
     background-color: var(--primary-color);
     color: var(--dark-color);
     box-shadow: none;
@@ -645,6 +666,14 @@ h4 {
 
 .contact-item:hover a::after {
     width: 100%;
+}
+
+.reservation-policy ul li {
+    font-weight: 300;
+}
+
+.reservation-policy ul li strong {
+    font-weight: 700;
 }
 
 /* Map */
