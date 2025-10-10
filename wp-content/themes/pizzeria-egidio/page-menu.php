@@ -33,37 +33,45 @@ get_header(); ?>
                         if ($pizzas->have_posts()) :
                 ?>
                             <div class="accordion-item menu-category fade-in-up">
-                            <!-- adatta a quanto sotto
-                            <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Accordion Item #1
-                                    </button>
-                                </h2>
-                            -->
-                                <h2>
-                                    <?php echo esc_html($category->name); ?></h2>
-                                <?php if ($category->description) : ?>
-                                    <p class="category-description"><?php echo esc_html($category->description); ?></p>
-                                <?php endif; ?>
+    <h2 class="accordion-header" id="heading-<?php echo esc_attr($category->term_id); ?>">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse-<?php echo esc_attr($category->term_id); ?>"
+            aria-expanded="false" aria-controls="collapse-<?php echo esc_attr($category->term_id); ?>">
+            <?php echo esc_html($category->name); ?>
+        </button>
+    </h2>
 
-                                <div class="menu-items">
+    <div id="collapse-<?php echo esc_attr($category->term_id); ?>" class="accordion-collapse collapse"
+        aria-labelledby="heading-<?php echo esc_attr($category->term_id); ?>" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            
+            <?php if ($category->description) : ?>
+                <p class="category-description"><?php echo esc_html($category->description); ?></p>
+            <?php endif; ?>
 
-                                    <?php while ($pizzas->have_posts()) : $pizzas->the_post(); ?>
-                                        <div class="menu-item">
-                                            <div class="menu-item-info">
-                                                <h4><?php the_title(); ?></h4>
-                                                <?php if (get_the_excerpt()) : ?>
-                                                    <p class="menu-item-description"><?php echo get_the_excerpt(); ?></p>
-                                                <?php endif; ?>
-                                                <p class="menu-item-ingredients"><?php echo esc_html(pizzeria_egidio_get_pizza_ingredients(get_the_ID())); ?></p>
-                                            </div>
-                                            <div class="menu-item-price">
-                                                <?php echo pizzeria_egidio_get_pizza_price(get_the_ID()); ?>
-                                            </div>
-                                        </div>
-                                    <?php endwhile; ?>
-                                </div>
-                            </div>
+            <div class="menu-items">
+                <?php while ($pizzas->have_posts()) : $pizzas->the_post(); ?>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4><?php the_title(); ?></h4>
+                            <?php if (get_the_excerpt()) : ?>
+                                <p class="menu-item-description"><?php echo get_the_excerpt(); ?></p>
+                            <?php endif; ?>
+                            <p class="menu-item-ingredients">
+                                <?php echo esc_html(pizzeria_egidio_get_pizza_ingredients(get_the_ID())); ?>
+                            </p>
+                        </div>
+                        <div class="menu-item-price">
+                            <?php echo pizzeria_egidio_get_pizza_price(get_the_ID()); ?>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+
+        </div> <!-- fine accordion-body -->
+    </div> <!-- fine accordion-collapse -->
+</div> <!-- fine accordion-item -->
+
                 <?php
                             wp_reset_postdata();
                         endif;
