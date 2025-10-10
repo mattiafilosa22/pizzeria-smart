@@ -47,10 +47,10 @@ get_header(); ?>
                     <h2>Il nostro segreto? <span class="text-primary">Una farina speciale</span></h2>
                     <p class="lead">Il cuore della nostra pizza è l'impasto: 72 ore di lievitazione naturale con farine selezionate e macinate a pietra. Un processo che rende la nostra pizza incredibilmente digeribile e dal sapore unico.</p>
                     <ul class="pizza-features">
-                        <li><i class="fas fa-check text-primary"></i> Lievitazione naturale di 72 ore</li>
-                        <li><i class="fas fa-check text-primary"></i> Farine macinate a pietra</li>
-                        <li><i class="fas fa-check text-primary"></i> Ingredienti selezionati dal territorio</li>
-                        <li><i class="fas fa-check text-primary"></i> Altamente digeribile</li>
+                        <li><i class="bi bi-check-circle text-primary"></i> Lievitazione naturale di 72 ore</li>
+                        <li><i class="bi bi-check-circle text-primary"></i> Farine macinate a pietra</li>
+                        <li><i class="bi bi-check-circle text-primary"></i> Ingredienti selezionati dal territorio</li>
+                        <li><i class="bi bi-check-circle text-primary"></i> Altamente digeribile</li>
                     </ul>
                     <a href="<?php echo esc_url(home_url('/menu/')); ?>" class="btn btn-primary">Scopri le Nostre Pizze</a>
                 </div>
@@ -149,10 +149,10 @@ get_header(); ?>
                     <h2>Un'atmosfera unica <span class="text-primary">nel cuore di Piombino</span></h2>
                     <p class="lead">Il nostro locale unisce il calore della tradizione italiana all'eleganza del design moderno. Uno spazio accogliente dove ogni dettaglio è pensato per il vostro comfort.</p>
                     <ul class="pizza-features">
-                        <li><i class="fas fa-check text-primary"></i> Ambiente moderno e accogliente</li>
-                        <li><i class="fas fa-check text-primary"></i> Design curato nei minimi dettagli</li>
-                        <li><i class="fas fa-check text-primary"></i> Perfetto per cene romantiche e di famiglia</li>
-                        <li><i class="fas fa-check text-primary"></i> Nel centro storico di Piombino</li>
+                        <li><i class="bi bi-check-circle text-primary"></i> Ambiente moderno e accogliente</li>
+                        <li><i class="bi bi-check-circle text-primary"></i> Design curato nei minimi dettagli</li>
+                        <li><i class="bi bi-check-circle text-primary"></i> Perfetto per cene romantiche e di famiglia</li>
+                        <li><i class="bi bi-check-circle text-primary"></i> Nel centro storico di Piombino</li>
                     </ul>
                     <a href="<?php echo esc_url(home_url('/contatti/')); ?>" class="btn btn-primary">Prenota il tuo Tavolo</a>
                 </div>

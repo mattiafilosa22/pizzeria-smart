@@ -39,7 +39,7 @@
             </nav>
 
             <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu">
-                <i class="fas fa-bars"></i>
+                <i class="bi bi-list"></i>
             </button>
         </div>
     </div>

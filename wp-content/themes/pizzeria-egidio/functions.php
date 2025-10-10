@@ -69,10 +69,10 @@ function pizzeria_egidio_scripts()
         null
     );
 
-    // Font Awesome
+    // Bootstrap Icons
     wp_enqueue_style(
-        'font-awesome',
-        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
+        'bootstrap-icons',
+        'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css',
         array(),
         null
     );
@@ -89,7 +89,7 @@ function pizzeria_egidio_scripts()
     wp_enqueue_style(
         'pizzeria-egidio-style',
         get_stylesheet_uri(),
-        array('pizzeria-egidio-fonts', 'bootstrap-css'),
+        array('pizzeria-egidio-fonts', 'bootstrap-css', 'bootstrap-icons'),
         wp_get_theme()->get('Version')
     );
 

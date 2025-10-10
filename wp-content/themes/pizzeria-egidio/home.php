@@ -47,8 +47,8 @@
                 <div class="pagination-wrapper text-center">
                     <?php
                     the_posts_pagination(array(
-                        'prev_text' => '<i class="fas fa-chevron-left"></i> Precedente',
-                        'next_text' => 'Successivo <i class="fas fa-chevron-right"></i>',
+                        'prev_text' => '<i class="bi bi-chevron-left"></i> Precedente',
+                        'next_text' => 'Successivo <i class="bi bi-chevron-right"></i>',
                     ));
                     ?>
                 </div>

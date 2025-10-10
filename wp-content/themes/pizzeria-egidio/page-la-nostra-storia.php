@@ -23,9 +23,9 @@ get_header(); ?>
                         <h2><span class="accent-font">C'era una volta</span> Egidio...</h2>
                         <p class="lead">Negli anni '60, Egidio apriva le porte del suo primo locale nel cuore di Piombino, diventando rapidamente un punto di riferimento per tutta la comunità. La sua pizza, preparata con ingredienti semplici ma di qualità, conquistò il palato di generazioni di piombinesi.</p>
 
-                        <p>Il segreto di Egidio era la passione: ogni pizza era preparata con cura maniacale, dalla scelta degli ingredienti alla cottura nel forno a legna. Il suo locale divenne presto un luogo di incontro, dove le famiglie si riunivano e i sapori autentici della tradizione italiana prendevano vita.</p>
+                        <p class="lead">Il segreto di Egidio era la passione: ogni pizza era preparata con cura maniacale, dalla scelta degli ingredienti alla cottura nel forno a legna. Il suo locale divenne presto un luogo di incontro, dove le famiglie si riunivano e i sapori autentici della tradizione italiana prendevano vita.</p>
 
-                        <p>Per decenni, il nome "Egidio" è stato sinonimo di qualità e tradizione a Piombino, creando ricordi indelebili nella memoria collettiva della città.</p>
+                        <p class="lead">Per decenni, il nome "Egidio" è stato sinonimo di qualità e tradizione a Piombino, creando ricordi indelebili nella memoria collettiva della città.</p>
                     </div>
                 </div>
 
@@ -34,14 +34,14 @@ get_header(); ?>
                         <h2>Il testimone <span class="text-primary">passa a noi</span></h2>
                         <p class="lead">Oggi, con profondo rispetto per questa eredità, portiamo avanti il nome di Egidio con una visione moderna e innovativa. Non si tratta solo di nostalgia, ma di un impegno concreto verso l'eccellenza.</p>
 
-                        <p>La nostra filosofia unisce il meglio della tradizione con le più moderne tecniche di panificazione. Abbiamo mantenuto lo spirito originale di Egidio - l'attenzione alla qualità e il calore dell'accoglienza italiana - arricchendolo con:</p>
+                        <p class="lead">La nostra filosofia unisce il meglio della tradizione con le più moderne tecniche di panificazione. Abbiamo mantenuto lo spirito originale di Egidio - l'attenzione alla qualità e il calore dell'accoglienza italiana - arricchendolo con:</p>
 
-                        <ul class="story-features">
-                            <li><i class="fas fa-seedling text-primary"></i> <strong>Ricerca delle materie prime:</strong> Selezioniamo personalmente ogni ingrediente, privilegiando fornitori locali e prodotti a km zero</li>
-                            <li><i class="fas fa-clock text-primary"></i> <strong>Impasto innovativo:</strong> 72 ore di lievitazione naturale per una pizza più digeribile e saporita</li>
-                            <li><i class="fas fa-home text-primary"></i> <strong>Ambiente rinnovato:</strong> Un locale moderno che mantiene il calore dell'accoglienza tradizionale</li>
-                            <li><i class="fas fa-heart text-primary"></i> <strong>Passione familiare:</strong> Ogni pizza è preparata con la stessa dedizione che Egidio metteva nel suo lavoro</li>
-                        </ul>
+                        <div class="story-features">
+                            <p><i class="bi bi-flower2 text-primary"></i> <strong>Ricerca delle materie prime</strong><br /> Selezioniamo personalmente ogni ingrediente, privilegiando fornitori locali e prodotti a km zero</p>
+                            <p><i class="bi bi-clock text-primary"></i> <strong>Impasto innovativo</strong><br /> 72 ore di lievitazione naturale per una pizza più digeribile e saporita</p>
+                            <p><i class="bi bi-house text-primary"></i> <strong>Ambiente rinnovato</strong><br /> Un locale moderno che mantiene il calore dell'accoglienza tradizionale</p>
+                            <p><i class="bi bi-heart text-primary"></i> <strong>Passione familiare</strong><br /> Ogni pizza è preparata con la stessa dedizione che Egidio metteva nel suo lavoro</p>
+                        </div>
 
                         <p>Il risultato è una pizzeria che onora il passato guardando al futuro, dove ogni boccone racconta una storia di passione e qualità che attraversa le generazioni.</p>
                     </div>

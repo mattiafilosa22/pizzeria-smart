@@ -26,9 +26,9 @@
             const $icon = $(this).find('i');
             
             if ($mainNav.hasClass('active')) {
-                $icon.removeClass('fa-bars').addClass('fa-times');
+                $icon.removeClass('bi-list').addClass('bi-x-lg');
             } else {
-                $icon.removeClass('fa-times').addClass('fa-bars');
+                $icon.removeClass('bi-x-lg').addClass('bi-list');
             }
         });
 
@@ -36,7 +36,7 @@
         $mainNav.find('a').on('click', function() {
             if ($(window).width() <= 768) {
                 $mainNav.removeClass('active');
-                $mobileToggle.find('i').removeClass('fa-times').addClass('fa-bars');
+                $mobileToggle.find('i').removeClass('bi-x-lg').addClass('bi-list');
             }
         });
 
@@ -44,7 +44,7 @@
         $(window).on('resize', function() {
             if ($(window).width() > 768) {
                 $mainNav.removeClass('active');
-                $mobileToggle.find('i').removeClass('fa-times').addClass('fa-bars');
+                $mobileToggle.find('i').removeClass('bi-x-lg').addClass('bi-list');
             }
         });
     }

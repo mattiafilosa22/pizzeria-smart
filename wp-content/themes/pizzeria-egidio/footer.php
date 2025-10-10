@@ -5,9 +5,9 @@
                 <h3>Pizzeria Egidio</h3>
                 <p>Nel cuore di Piombino, dove la tradizione incontra l'innovazione per offrirti la pizza più buona e digeribile della città.</p>
                 <div class="social-links">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="TripAdvisor"><i class="bi bi-signpost-2"></i></a>
                 </div>
             </div>
 
@@ -52,7 +52,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; <?php echo date('Y'); ?> Pizzeria Egidio. Tutti i diritti riservati. | Tema sviluppato da <a href="#" target="_blank">Mattia Filosa</a></p>
+            <p>&copy; <?php echo date('Y'); ?> Pizzeria Egidio. Tutti i diritti riservati. | Tema sviluppato da Mattia Filosa</p>
         </div>
     </div>
 </footer>
@@ -70,11 +70,11 @@ document.addEventListener('DOMContentLoaded', function() {
             mainNav.classList.toggle('active');
             const icon = this.querySelector('i');
             if (mainNav.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
+                icon.classList.remove('bi-list');
+                icon.classList.add('bi-x-lg');
             } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                icon.classList.remove('bi-x-lg');
+                icon.classList.add('bi-list');
             }
         });
     }

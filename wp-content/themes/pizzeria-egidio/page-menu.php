@@ -13,7 +13,7 @@ get_header(); ?>
                 <h1>Il Nostro Menù</h1>
                 <p class="lead">Tutte le nostre pizze sono realizzate con il nostro esclusivo impasto a lunga lievitazione e farine selezionate.</p>
                 <div class="menu-note">
-                    <i class="fas fa-info-circle text-primary"></i>
+                    <i class="bi bi-info-circle text-primary"></i>
                     <span>Impasto a lievitazione naturale di 72 ore - Altamente digeribile</span>
                 </div>
             </div>
@@ -243,10 +243,10 @@ get_header(); ?>
 
             <div class="text-center mt-4">
                 <p class="menu-footer-note">
-                    <i class="fas fa-leaf text-primary"></i>
+                    <i class="bi bi-leaf text-primary"></i>
                     Tutti i nostri ingredienti sono selezionati con cura dai migliori fornitori locali.
                     <br>
-                    <i class="fas fa-phone text-primary"></i>
+                    <i class="bi bi-telephone text-primary"></i>
                     Per prenotazioni chiamare il <a href="tel:<?php echo esc_attr(str_replace(' ', '', get_theme_mod('contact_phone', '+39 0565 123456'))); ?>"><?php echo esc_html(get_theme_mod('contact_phone', '+39 0565 123456')); ?></a>
                 </p>
             </div>

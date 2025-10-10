@@ -55,7 +55,7 @@
                             <?php if ($prev_post) : ?>
                                 <div class="nav-previous">
                                     <a href="<?php echo get_permalink($prev_post); ?>" class="btn btn-secondary">
-                                        <i class="fas fa-chevron-left"></i> <?php echo get_the_title($prev_post); ?>
+                                        <i class="bi bi-chevron-left"></i> <?php echo get_the_title($prev_post); ?>
                                     </a>
                                 </div>
                             <?php endif; ?>
@@ -63,7 +63,7 @@
                             <?php if ($next_post) : ?>
                                 <div class="nav-next">
                                     <a href="<?php echo get_permalink($next_post); ?>" class="btn btn-secondary">
-                                        <?php echo get_the_title($next_post); ?> <i class="fas fa-chevron-right"></i>
+                                        <?php echo get_the_title($next_post); ?> <i class="bi bi-chevron-right"></i>
                                     </a>
                                 </div>
                             <?php endif; ?>

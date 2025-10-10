@@ -26,7 +26,7 @@ get_header(); ?>
                 <!-- Informazioni di contatto -->
                 <div class="contact-grid grid grid-2 fade-in-up">
                     <div class="contact-info">
-                        <h2><i class="fas fa-map-marker-alt text-primary"></i> Dove Siamo</h2>
+                        <h2><i class="bi bi-geo-alt text-primary"></i> Dove Siamo</h2>
                         <p class="contact-address">
                             <strong><?php echo esc_html(get_theme_mod('contact_address', 'Via Roma 123, 57025 Piombino (LI)')); ?></strong>
                         </p>
@@ -34,16 +34,16 @@ get_header(); ?>
 
                         <div class="contact-directions">
                             <h4>Come Raggiungerci:</h4>
-                            <ul>
-                                <li><i class="fas fa-car text-primary"></i> <strong>In auto:</strong> Parcheggi pubblici a 100m dal locale</li>
-                                <li><i class="fas fa-bus text-primary"></i> <strong>Con i mezzi:</strong> Fermata autobus linea urbana "Centro"</li>
-                                <li><i class="fas fa-walking text-primary"></i> <strong>A piedi:</strong> Nel centro pedonale di Piombino</li>
-                            </ul>
+                            <div>
+                                <p><i class="bi bi-car-front text-primary"></i> <strong>In auto</strong><br /> Parcheggi pubblici a 100m dal locale</p>
+                                <p><i class="bi bi-bus-front text-primary"></i> <strong>Con i mezzi</strong><br /> Fermata autobus linea urbana "Centro"</p>
+                                <p><i class="bi bi-person-walking text-primary"></i> <strong>A piedi</strong><br /> Nel centro pedonale di Piombino</p>
+                            </div>
                         </div>
                     </div>
 
                     <div class="contact-info">
-                        <h2><i class="fas fa-clock text-primary"></i> Orari di Apertura</h2>
+                        <h2><i class="bi bi-clock text-primary"></i> Orari di Apertura</h2>
                         <div class="opening-hours-table">
                             <?php
                             $hours = get_theme_mod('opening_hours', "Martedì - Domenica: 19:00 - 24:00\nLunedì: Chiuso");
@@ -63,7 +63,7 @@ get_header(); ?>
                         </div>
 
                         <div class="hours-note">
-                            <p><i class="fas fa-info-circle text-primary"></i> <strong>Nota importante:</strong> Consigliamo di prenotare, specialmente nei weekend e nei giorni festivi.</p>
+                            <p><i class="bi bi-info-circle text-primary"></i> <strong>Nota importante:</strong> Consigliamo di prenotare, specialmente nei weekend e nei giorni festivi.</p>
                         </div>
                     </div>
                 </div>
@@ -71,12 +71,12 @@ get_header(); ?>
                 <!-- Contatti diretti -->
                 <div class="contact-grid grid grid-2 fade-in-up">
                     <div class="contact-info">
-                        <h2><i class="fas fa-phone text-primary"></i> Contatti Diretti</h2>
+                        <h2><i class="bi bi-telephone text-primary"></i> Contatti Diretti</h2>
 
                         <div class="contact-methods">
                             <div class="contact-method">
                                 <div class="contact-icon-large">
-                                    <i class="fas fa-phone"></i>
+                                    <i class="bi bi-telephone"></i>
                                 </div>
                                 <div class="contact-details">
                                     <h4>Telefono</h4>
@@ -91,7 +91,7 @@ get_header(); ?>
 
                             <div class="contact-method">
                                 <div class="contact-icon-large">
-                                    <i class="fas fa-envelope"></i>
+                                    <i class="bi bi-envelope"></i>
                                 </div>
                                 <div class="contact-details">
                                     <h4>Email</h4>
@@ -107,7 +107,7 @@ get_header(); ?>
                     </div>
 
                     <div class="contact-info">
-                        <h2><i class="fas fa-calendar-alt text-primary"></i> Prenotazioni</h2>
+                        <h2><i class="bi bi-calendar-event text-primary"></i> Prenotazioni</h2>
 
                         <div class="reservation-info">
                             <div class="reservation-highlight">
@@ -115,7 +115,7 @@ get_header(); ?>
                                 <p class="lead">Per prenotare il tuo tavolo, ti consigliamo di chiamarci al numero:</p>
                                 <div class="phone-highlight">
                                     <a href="tel:<?php echo esc_attr(str_replace(' ', '', get_theme_mod('contact_phone', '+39 0565 123456'))); ?>" class="btn btn-primary btn-medium">
-                                        <i class="fas fa-phone"></i> <?php echo esc_html(get_theme_mod('contact_phone', '+39 0565 123456')); ?>
+                                        <i class="bi bi-telephone"></i> <?php echo esc_html(get_theme_mod('contact_phone', '+39 0565 123456')); ?>
                                     </a>
                                 </div>
                             </div>
@@ -123,10 +123,10 @@ get_header(); ?>
                             <div class="reservation-policy">
                                 <h4>Policy Prenotazioni</h4>
                                 <ul>
-                                    <li><i class="fas fa-check text-primary"></i> <strong>Non accettiamo prenotazioni via email</strong></li>
-                                    <li><i class="fas fa-check text-primary"></i> Consigliamo di prenotare con anticipo nei weekend</li>
-                                    <li><i class="fas fa-check text-primary"></i> Conferma telefonica obbligatoria per gruppi oltre 8 persone</li>
-                                    <li><i class="fas fa-check text-primary"></i> Possibilità di prenotare fino a 30 minuti prima dell'orario desiderato</li>
+                                    <li><i class="bi bi-check-circle text-primary"></i> <strong>Non accettiamo prenotazioni via email</strong></li>
+                                    <li><i class="bi bi-check-circle text-primary"></i> Consigliamo di prenotare con anticipo nei weekend</li>
+                                    <li><i class="bi bi-check-circle text-primary"></i> Conferma telefonica obbligatoria per gruppi oltre 8 persone</li>
+                                    <li><i class="bi bi-check-circle text-primary"></i> Possibilità di prenotare fino a 30 minuti prima dell'orario desiderato</li>
                                 </ul>
                             </div>
                         </div>
@@ -140,21 +140,21 @@ get_header(); ?>
                         <p>Resta aggiornato sulle nostre novità, pizze speciali e eventi!</p>
                         <div class="social-links-large">
                             <a href="#" class="social-link facebook" aria-label="Facebook">
-                                <i class="fab fa-facebook-f"></i>
+                                <i class="bi bi-facebook"></i>
                                 <span>Facebook</span>
                             </a>
                             <a href="#" class="social-link instagram" aria-label="Instagram">
-                                <i class="fab fa-instagram"></i>
+                                <i class="bi bi-instagram"></i>
                                 <span>Instagram</span>
                             </a>
                             <a href="#" class="social-link tripadvisor" aria-label="TripAdvisor">
-                                <i class="fab fa-tripadvisor"></i>
+                                <i class="bi bi-signpost-2"></i>
                                 <span>TripAdvisor</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
