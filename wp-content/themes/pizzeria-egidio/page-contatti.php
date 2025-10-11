@@ -46,7 +46,7 @@ get_header(); ?>
                         <h2><i class="bi bi-clock text-primary"></i> Orari di Apertura</h2>
                         <div class="opening-hours-table">
                             <?php
-                            $hours = get_theme_mod('opening_hours', "Martedì - Domenica: 19:00 - 24:00\nLunedì: Chiuso");
+                            $hours = get_theme_mod('opening_hours', "Martedì - Domenica: 19:00 - 23:00\nMercoledì: Chiuso");
                             $hours_lines = explode("\n", $hours);
                             foreach ($hours_lines as $line) {
                                 if (trim($line)) {
