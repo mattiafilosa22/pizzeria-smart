@@ -1,5 +1,4 @@
 <?php
-$iframesrc = get_field('iframe_src');
 $where_group = get_field('where_group');
 $where_title = $where_group['where_title'];
 $where_subtitle = $where_group['where_subtitle'];
@@ -36,8 +35,13 @@ $description_social = $social['description_social'];
   <!-- Mappa -->
   <div class="contact-section fade-in-up">
     <div class="map-container">
-      <!-- Sostituisci con il vero indirizzo della pizzeria -->
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.1234567890123!2d10.5276!3d42.9258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDU1JzMzLjAiTiAxMMKwMzEnMzkuNCJF!5e0!3m2!1sit!2sit!4v1234567890123!5m2!1sit!2sit" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <?php
+  // Usa il campo ACF 'iframe_src' se impostato (consente all'admin di sovrascrivere l'embed),
+  // altrimenti usa un URL embed generato per l'indirizzo richiesto.
+  $default_map_src = 'https://www.google.com/maps?q=' . rawurlencode($where_subtitle) . '&z=17&output=embed';
+  $map_src = !empty($iframesrc) ? $iframesrc : $default_map_src;
+  ?>
+  <iframe src="<?php echo esc_url($map_src); ?>" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 
