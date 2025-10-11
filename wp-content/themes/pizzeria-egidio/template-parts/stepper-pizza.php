@@ -3,14 +3,15 @@ $stepper_pizza_title = get_field('stepper_pizza_title');
 $stepper_pizza_title_gold = get_field('stepper_pizza_title_gold');
 $stepper_pizza_description = get_field('stepper_pizza_description');
 $stepper_content_image = get_field('stepper_content_image');
-$stepper_content_title_1 = get_field('stepper_content_title_1');
-$stepper_content_text_1 = get_field('stepper_content_text_1');
-$stepper_content_title_2 = get_field('stepper_content_title_2');
-$stepper_content_text_2 = get_field('stepper_content_text_2');
-$stepper_content_title_3 = get_field('stepper_content_title_3');
-$stepper_content_text_3 = get_field('stepper_content_text_3');
-$stepper_content_title_4 = get_field('stepper_content_title_4');
-$stepper_content_text_4 = get_field('stepper_content_text_4');
+$stepper_group = get_field('stepper_content');
+$stepper_content_title_1 = $stepper_group['stepper_content_title_1'];
+$stepper_content_text_1 = $stepper_group['stepper_content_text_1'];
+$stepper_content_title_2 = $stepper_group['stepper_content_title_2'];
+$stepper_content_text_2 = $stepper_group['stepper_content_text_2'];
+$stepper_content_title_3 = $stepper_group['stepper_content_title_3'];
+$stepper_content_text_3 = $stepper_group['stepper_content_text_3'];
+$stepper_content_title_4 = $stepper_group['stepper_content_title_4'];
+$stepper_content_text_4 = $stepper_group['stepper_content_text_4'];
 ?>
 
 <div class="pizza-special fade-in-up">

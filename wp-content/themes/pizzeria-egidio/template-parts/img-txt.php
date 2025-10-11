@@ -4,10 +4,11 @@ $img_txt_title_gold = get_field('img_txt_title_gold');
 $img_txt_description = get_field('img_txt_description');
 $img_pizza_section = get_field('img_txt_img');
 $img_pizza_section_position = get_field('img_txt_position');
-$img_txt_step_txt_1 = get_field('img_txt_step_txt_1');
-$img_txt_step_txt_2 = get_field('img_txt_step_txt_2');
-$img_txt_step_txt_3 = get_field('img_txt_step_txt_3');
-$img_txt_step_txt_4 = get_field('img_txt_step_txt_4');
+$step = get_field('step');
+$img_txt_step_txt_1 = $step['img_txt_step_txt_1'];
+$img_txt_step_txt_2 = $step['img_txt_step_txt_2'];
+$img_txt_step_txt_3 = $step['img_txt_step_txt_3'];
+$img_txt_step_txt_4 = $step['img_txt_step_txt_4'];
 ?>
 
 <section class="section section-alt" id="pizza-section">

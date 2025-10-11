@@ -14,9 +14,12 @@ $background_grey = get_field('text_cta_background_grey');
 <section class="section">
   <div class="container">
     <div class="about-teaser text-center fade-in-up">
-      <h2><?= esc_html($titleCtaText); ?><span class="text-primary"><br /><?= esc_html($titleGoldCtaText); ?></span></h2>
-      <p class="lead"><?= esc_html($descriptionCtaText); ?></p>
-      <a href="<?php echo esc_url($buttonLeftCtaUrl); ?>" class="btn btn-primary"><?= esc_html($buttonLeftCtaText); ?></a>
+      <h2><?= esc_html($title_cta_text); ?><span class="text-primary"><br /><?= esc_html($title_gold_cta_text); ?></span></h2>
+      <div class="lead"><?php echo function_exists( 'wp_kses_post' ) ? wp_kses_post( $description_cta_text ) : $description_cta_text; ?></div>
+      <a href="<?php echo esc_url($button_left_cta_url); ?>" class="btn btn-primary"><?= esc_html($button_left_cta_text); ?></a>
+      <?php if ( $button_right_cta_url ) : ?>
+      <a href="<?php echo esc_url($button_right_cta_url); ?>" class="btn btn-secondary ms-3"><?= esc_html($button_right_cta_text); ?></a>
+      <?php endif; ?>
     </div>
   </div>
 </section>
