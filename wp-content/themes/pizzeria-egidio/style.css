@@ -644,6 +644,7 @@ small {
     .process-step {
         flex-direction: column;
         text-align: center;
+        align-items: anchor-center;
     }
 
     .story-features li {
