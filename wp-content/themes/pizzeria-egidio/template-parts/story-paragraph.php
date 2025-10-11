@@ -7,7 +7,7 @@ $image_story = get_field('image_story');
 
 <div class="pizza-special fade-in-up">
   <div class="pizza-special-image">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/storia-egidio-vintage.jpg" alt="Foto storica di Egidio" />
+    <img src="<?php echo esc_url($image_story['url']); ?>" alt="Foto storica di Egidio" />
   </div>
   <div class="pizza-special-content">
     <h2><span class="accent-font"><?php echo esc_html($title_story_gold); ?></span> <?php echo esc_html($title_story); ?></h2>

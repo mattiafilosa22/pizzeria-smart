@@ -9,13 +9,15 @@ $img_txt_step_txt_1 = $step['img_txt_step_txt_1'];
 $img_txt_step_txt_2 = $step['img_txt_step_txt_2'];
 $img_txt_step_txt_3 = $step['img_txt_step_txt_3'];
 $img_txt_step_txt_4 = $step['img_txt_step_txt_4'];
+$image = get_field('img_txt_img');
+$image_url = $image['url'];
 ?>
 
 <section class="section section-alt" id="pizza-section">
   <div class="container">
     <div class="pizza-special fade-in-up">
       <div class="pizza-special-image">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/pizza-impasto.jpg" alt="Il nostro impasto speciale" />
+        <img src="<?php echo esc_url($image_url); ?>" alt="Il nostro impasto speciale" />
       </div>
       <div class="pizza-special-content">
         <h2><?= esc_html($img_txt_title_gold); ?><span class="text-primary"><?= esc_html($img_txt_title); ?></span></h2>

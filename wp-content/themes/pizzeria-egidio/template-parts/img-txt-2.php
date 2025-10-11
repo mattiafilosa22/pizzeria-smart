@@ -9,6 +9,8 @@ $img_txt_step_txt_1_2 = $img_step_group['img_txt_step_txt_1_2'];
 $img_txt_step_txt_2_2 = $img_step_group['img_txt_step_txt_2_2'];
 $img_txt_step_txt_2_3 = $img_step_group['img_txt_step_txt_2_3'];
 $img_txt_step_txt_2_4 = $img_step_group['img_txt_step_txt_2_4'];
+$image = get_field('img_txt_img_2');
+$image_url = $image['url'];
 ?>
 
 <section class="section section-alt">
@@ -26,7 +28,7 @@ $img_txt_step_txt_2_4 = $img_step_group['img_txt_step_txt_2_4'];
         <a href="<?php echo esc_url(home_url('/contatti/')); ?>" class="btn btn-primary">Prenota il tuo Tavolo</a>
       </div>
       <div class="pizza-special-image">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/locale-interno.jpg" alt="Interno del nostro locale" />
+        <img src="<?php echo esc_url($image_url); ?>" alt="Interno del nostro locale" />
       </div>
     </div>
   </div>

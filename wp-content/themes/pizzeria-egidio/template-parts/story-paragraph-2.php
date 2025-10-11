@@ -13,6 +13,7 @@ $group_story_description_3 = $group['group_story_description_3'];
 $group_story_title_4 = $group['group_story_title_4'];
 $group_story_description_4 = $group['group_story_description_4'];
 $text_bottom_story = $group['text_bottom_story_2'];
+$image = get_field('image_story_2');
 ?>
 
 <div class="pizza-special fade-in-up">
@@ -30,6 +31,6 @@ $text_bottom_story = $group['text_bottom_story_2'];
   <div class="lead"><?php echo function_exists( 'wp_kses_post' ) ? wp_kses_post( $text_bottom_story ) : $text_bottom_story; ?></div>
   </div>
   <div class="pizza-special-image">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/locale-moderno.jpg" alt="Il nostro locale oggi" />
+    <img src="<?php echo esc_url($image['url']); ?>" alt="Il nostro locale oggi" />
   </div>
 </div>

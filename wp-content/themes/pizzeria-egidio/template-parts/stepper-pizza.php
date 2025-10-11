@@ -16,7 +16,7 @@ $stepper_content_text_4 = $stepper_group['stepper_content_text_4'];
 
 <div class="pizza-special fade-in-up">
   <div class="pizza-special-image">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/pizza-making.jpg" alt="La preparazione delle nostre pizze" />
+    <img src="<?php echo esc_url($stepper_content_image['url']); ?>" alt="La preparazione delle nostre pizze" />
   </div>
   <div class="pizza-special-content">
     <h2><?php echo esc_html($stepper_pizza_title); ?> <span class="text-primary"><?php echo esc_html($stepper_pizza_title_gold); ?></span></h2>
