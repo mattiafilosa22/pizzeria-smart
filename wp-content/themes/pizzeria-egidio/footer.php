@@ -10,7 +10,15 @@
                     <a href="#" aria-label="TripAdvisor"><i class="bi bi-signpost-2"></i></a>
                 </div>
             </div>
-
+            <div class="footer-section">
+                <h3>Orari di Apertura</h3>
+                <div class="opening-hours">
+                    <?php
+                    $hours = get_theme_mod('opening_hours', "Martedì - Domenica: 19:00 - 24:00\nLunedì: Chiuso");
+                    echo nl2br(esc_html($hours));
+                    ?>
+                </div>
+            </div>
             <div class="footer-section">
                 <h3>Contatti</h3>
                 <div class="contact-item">
@@ -28,27 +36,19 @@
                 </div>
             </div>
 
-            <div class="footer-section">
-                <h3>Orari di Apertura</h3>
-                <div class="opening-hours">
-                    <?php
-                    $hours = get_theme_mod('opening_hours', "Martedì - Domenica: 19:00 - 24:00\nLunedì: Chiuso");
-                    echo nl2br(esc_html($hours));
-                    ?>
-                </div>
-            </div>
 
-            <div class="footer-section">
+
+            <!--<div class="footer-section">
                 <h3>Menu Rapido</h3>
                 <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'footer',
-                    'container'      => false,
-                    'menu_class'     => 'footer-menu',
-                    'fallback_cb'    => false,
-                ));
+                // wp_nav_menu(array(
+                //     'theme_location' => 'footer',
+                //     'container'      => false,
+                //     'menu_class'     => 'footer-menu',
+                //     'fallback_cb'    => false,
+                // ));
                 ?>
-            </div>
+            </div>-->
         </div>
 
         <div class="footer-bottom">
@@ -60,54 +60,55 @@
 <?php wp_footer(); ?>
 
 <script>
-// Mobile menu toggle
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileToggle = document.getElementById('mobile-menu-toggle');
-    const mainNav = document.getElementById('main-nav');
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        const mainNav = document.getElementById('main-nav');
 
-    if (mobileToggle && mainNav) {
-        mobileToggle.addEventListener('click', function() {
-            mainNav.classList.toggle('active');
-            const icon = this.querySelector('i');
-            if (mainNav.classList.contains('active')) {
-                icon.classList.remove('bi-list');
-                icon.classList.add('bi-x-lg');
-            } else {
-                icon.classList.remove('bi-x-lg');
-                icon.classList.add('bi-list');
-            }
-        });
-    }
+        if (mobileToggle && mainNav) {
+            mobileToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                const icon = this.querySelector('i');
+                if (mainNav.classList.contains('active')) {
+                    icon.classList.remove('bi-list');
+                    icon.classList.add('bi-x-lg');
+                } else {
+                    icon.classList.remove('bi-x-lg');
+                    icon.classList.add('bi-list');
+                }
+            });
+        }
 
-    // Header scroll effect
-    const header = document.getElementById('site-header');
-    if (header) {
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
-            }
-        });
-    }
+        // Header scroll effect
+        const header = document.getElementById('site-header');
+        if (header) {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.style.background = 'rgba(255, 255, 255, 0.98)';
+                    header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+                } else {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                    header.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+                }
+            });
+        }
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
     });
-});
 </script>
 
 </body>
+
 </html>
