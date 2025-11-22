@@ -1,0 +1,68 @@
+/* Typography */
+p,
+p.lead {
+  font-family: $font-secondary !important;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+p.lead strong,
+p strong {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  margin-bottom: $spacing-sm;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: $spacing-md;
+  background-color: $primary-color;
+  color: $white;
+}
+
+h2 {
+  font-size: 3.2rem;
+  margin-bottom: $spacing-md;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+small {
+  font-weight: 300;
+}
+
+.accent-font {
+  font-family: $font-accent;
+  color: $primary-color;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+}

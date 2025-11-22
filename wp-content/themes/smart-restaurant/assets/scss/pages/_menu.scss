@@ -1,0 +1,82 @@
+/* Menu Page */
+.menu-category {
+  margin-bottom: $spacing-xl;
+}
+
+.menu-category h3 {
+  color: $primary-color;
+  border-bottom: 3px solid $primary-color;
+  padding-bottom: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: $spacing-md 0;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item-info h4 {
+  color: $dark-color;
+  margin-bottom: $spacing-xs;
+}
+
+.menu-item-description {
+  color: $gray-dark;
+  font-style: italic;
+  margin-bottom: $spacing-xs;
+}
+
+.menu-item-ingredients {
+  color: $gray-medium;
+  font-size: 0.9rem;
+}
+
+.menu-item-price {
+  color: $primary-color;
+  font-weight: 700;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  margin-left: $spacing-sm;
+}
+
+.accordion-button {
+  font-size: 2.8rem;
+  background-color: $light-color;
+}
+
+.accordion-body {
+  background-color: $light-color;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: $primary-color;
+  color: $dark-color;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-item-price {
+    margin-left: 0;
+    margin-top: $spacing-sm;
+  }
+
+  .accordion-button {
+    font-size: 1.8rem;
+  }
+}

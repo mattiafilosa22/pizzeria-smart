@@ -1,0 +1,51 @@
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: $spacing-sm $spacing-md;
+  border: none;
+  border-radius: $border-radius;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: $transition;
+  font-size: 1.1rem;
+}
+
+.btn-primary {
+  background: $primary-color;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #b8941f;
+  /* Consider making this a darkened variable */
+  transform: translateY(-2px);
+  box-shadow: $shadow-lg;
+}
+
+.btn-secondary {
+  background: $white;
+  color: $primary-color;
+  border: 2px solid $primary-color;
+}
+
+.btn-secondary:hover {
+  background: $primary-color;
+  color: white;
+}
+
+.btn-small {
+  padding: calc(#{$spacing-sm} * 0.5) $spacing-sm;
+  font-size: 0.9rem;
+}
+
+.btn-medium {
+  padding: calc(#{$spacing-sm} * 0.75) calc(#{$spacing-md} * 1.25);
+  font-size: 1rem;
+}
+
+.btn-large {
+  padding: $spacing-md $spacing-lg;
+  font-size: 1.2rem;
+}

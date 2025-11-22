@@ -1,0 +1,79 @@
+/* Hero Banner */
+.hero-banner {
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+}
+
+.hero-banner.has-bg-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner.has-bg-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-banner.has-bg-image .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 25% 75%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 25%, rgba(231, 76, 60, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.05) 50%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-content h1 {
+  font-size: 7rem;
+  margin-bottom: $spacing-sm;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: none;
+  margin: 0;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: $spacing-lg 0;
+}
+
+.hero-tagline {
+  font-size: 1.5rem;
+  margin-bottom: $spacing-lg;
+  opacity: 0.9;
+  font-weight: 700;
+}
+
+.hero-description {
+  font-size: 1.3rem;
+  margin: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+}
