@@ -85,10 +85,10 @@ function pizzeria_egidio_scripts()
         null
     );
 
-    // Stile principale
+    // Stile principale (compilato da SCSS)
     wp_enqueue_style(
         'pizzeria-egidio-style',
-        get_stylesheet_uri(),
+        get_template_directory_uri() . '/assets/css/main.css',
         array('pizzeria-egidio-fonts', 'bootstrap-css', 'bootstrap-icons'),
         wp_get_theme()->get('Version')
     );
@@ -377,8 +377,158 @@ function pizzeria_egidio_customize_register($wp_customize)
         'section' => 'contact_section',
         'type'    => 'textarea',
     ));
+
+    // --- Brand Colors ---
+    $wp_customize->add_section('brand_colors_section', array(
+        'title'    => __('Colori Brand', 'pizzeria-egidio'),
+        'priority' => 20,
+    ));
+
+    $colors = array(
+        'primary_color'   => array('label' => 'Colore Primario', 'default' => '#d4af37'),
+        'secondary_color' => array('label' => 'Colore Secondario', 'default' => '#2c3e50'),
+        'accent_color'    => array('label' => 'Colore Accent', 'default' => '#e74c3c'),
+        'dark_color'      => array('label' => 'Colore Scuro', 'default' => '#1a1a1a'),
+        'light_color'     => array('label' => 'Colore Chiaro', 'default' => '#f8f9fa'),
+        'white_color'     => array('label' => 'Bianco', 'default' => '#ffffff'),
+        'gray_light'      => array('label' => 'Grigio Chiaro', 'default' => '#ecf0f1'),
+        'gray_medium'     => array('label' => 'Grigio Medio', 'default' => '#95a5a6'),
+        'gray_dark'       => array('label' => 'Grigio Scuro', 'default' => '#34495e'),
+    );
+
+    foreach ($colors as $id => $props) {
+        $wp_customize->add_setting($id, array(
+            'default'           => $props['default'],
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, $id, array(
+            'label'   => __($props['label'], 'pizzeria-egidio'),
+            'section' => 'brand_colors_section',
+        )));
+    }
+
+    // --- Typography ---
+    $wp_customize->add_section('typography_section', array(
+        'title'    => __('Tipografia', 'pizzeria-egidio'),
+        'priority' => 25,
+    ));
+
+    $fonts = array(
+        'font_primary'   => array('label' => 'Font Primario', 'default' => "'Bebas Neue', sans-serif"),
+        'font_secondary' => array('label' => 'Font Secondario', 'default' => "'Montserrat', sans-serif"),
+        'font_accent'    => array('label' => 'Font Accent', 'default' => "'Dancing Script', cursive"),
+    );
+
+    foreach ($fonts as $id => $props) {
+        $wp_customize->add_setting($id, array(
+            'default'           => $props['default'],
+            'sanitize_callback' => 'sanitize_text_field',
+        ));
+        $wp_customize->add_control($id, array(
+            'label'   => __($props['label'], 'pizzeria-egidio'),
+            'section' => 'typography_section',
+            'type'    => 'text',
+        ));
+    }
+
+    // --- Spacing ---
+    $wp_customize->add_section('spacing_section', array(
+        'title'    => __('Spaziature', 'pizzeria-egidio'),
+        'priority' => 26,
+    ));
+
+    $spacings = array(
+        'spacing_xs'  => array('label' => 'Spacing XS', 'default' => '0.5rem'),
+        'spacing_sm'  => array('label' => 'Spacing SM', 'default' => '1rem'),
+        'spacing_md'  => array('label' => 'Spacing MD', 'default' => '2rem'),
+        'spacing_lg'  => array('label' => 'Spacing LG', 'default' => '3rem'),
+        'spacing_xl'  => array('label' => 'Spacing XL', 'default' => '4rem'),
+        'spacing_xxl' => array('label' => 'Spacing XXL', 'default' => '6rem'),
+    );
+
+    foreach ($spacings as $id => $props) {
+        $wp_customize->add_setting($id, array(
+            'default'           => $props['default'],
+            'sanitize_callback' => 'sanitize_text_field',
+        ));
+        $wp_customize->add_control($id, array(
+            'label'   => __($props['label'], 'pizzeria-egidio'),
+            'section' => 'spacing_section',
+            'type'    => 'text',
+        ));
+    }
+
+    // --- Borders ---
+    $wp_customize->add_section('borders_section', array(
+        'title'    => __('Bordi', 'pizzeria-egidio'),
+        'priority' => 27,
+    ));
+
+    $borders = array(
+        'border_radius'    => array('label' => 'Border Radius', 'default' => '8px'),
+        'border_radius_lg' => array('label' => 'Border Radius Large', 'default' => '16px'),
+    );
+
+    foreach ($borders as $id => $props) {
+        $wp_customize->add_setting($id, array(
+            'default'           => $props['default'],
+            'sanitize_callback' => 'sanitize_text_field',
+        ));
+        $wp_customize->add_control($id, array(
+            'label'   => __($props['label'], 'pizzeria-egidio'),
+            'section' => 'borders_section',
+            'type'    => 'text',
+        ));
+    }
 }
 add_action('customize_register', 'pizzeria_egidio_customize_register');
+
+// Output CSS Variables
+function pizzeria_egidio_customize_css()
+{
+?>
+    <style type="text/css">
+        :root {
+            /* Colori Brand */
+            --primary-color: <?php echo get_theme_mod('primary_color', '#d4af37'); ?>;
+            --secondary-color: <?php echo get_theme_mod('secondary_color', '#2c3e50'); ?>;
+            --accent-color: <?php echo get_theme_mod('accent_color', '#e74c3c'); ?>;
+            --dark-color: <?php echo get_theme_mod('dark_color', '#1a1a1a'); ?>;
+            --light-color: <?php echo get_theme_mod('light_color', '#f8f9fa'); ?>;
+            --white: <?php echo get_theme_mod('white_color', '#ffffff'); ?>;
+            --gray-light: <?php echo get_theme_mod('gray_light', '#ecf0f1'); ?>;
+            --gray-medium: <?php echo get_theme_mod('gray_medium', '#95a5a6'); ?>;
+            --gray-dark: <?php echo get_theme_mod('gray_dark', '#34495e'); ?>;
+
+            /* Typography */
+            --font-primary: <?php echo get_theme_mod('font_primary', "'Bebas Neue', sans-serif"); ?>;
+            --font-secondary: <?php echo get_theme_mod('font_secondary', "'Montserrat', sans-serif"); ?>;
+            --font-accent: <?php echo get_theme_mod('font_accent', "'Dancing Script', cursive"); ?>;
+
+            /* Spacing */
+            --spacing-xs: <?php echo get_theme_mod('spacing_xs', '0.5rem'); ?>;
+            --spacing-sm: <?php echo get_theme_mod('spacing_sm', '1rem'); ?>;
+            --spacing-md: <?php echo get_theme_mod('spacing_md', '2rem'); ?>;
+            --spacing-lg: <?php echo get_theme_mod('spacing_lg', '3rem'); ?>;
+            --spacing-xl: <?php echo get_theme_mod('spacing_xl', '4rem'); ?>;
+            --spacing-xxl: <?php echo get_theme_mod('spacing_xxl', '6rem'); ?>;
+
+            /* Border Radius */
+            --border-radius: <?php echo get_theme_mod('border_radius', '8px'); ?>;
+            --border-radius-lg: <?php echo get_theme_mod('border_radius_lg', '16px'); ?>;
+
+            /* Shadows (static for now, can be added to customizer if needed) */
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+            /* Transitions */
+            --transition: all 0.3s ease;
+        }
+    </style>
+<?php
+}
+add_action('wp_head', 'pizzeria_egidio_customize_css');
 
 // Funzioni helper
 function pizzeria_egidio_get_pizzas($category = '', $limit = -1, $special_only = false)
