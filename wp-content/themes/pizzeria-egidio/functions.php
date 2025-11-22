@@ -45,7 +45,7 @@ function pizzeria_egidio_setup()
 
     // Dimensioni immagini personalizzate
     add_image_size('hero-banner', 1920, 1080, true);
-    add_image_size('pizza-special', 600, 400, true);
+    add_image_size('piatto-special', 600, 400, true);
     add_image_size('menu-item', 300, 200, true);
     add_image_size('card-image', 400, 250, true);
 }
@@ -166,17 +166,17 @@ add_action('widgets_init', 'pizzeria_egidio_widgets_init');
 // Custom Post Types
 function pizzeria_egidio_custom_post_types()
 {
-    // Post Type per le Pizze
-    register_post_type('pizza', array(
+    // Post Type per le piatti
+    register_post_type('piatto', array(
         'labels' => array(
-            'name'          => __('Pizze', 'pizzeria-egidio'),
-            'singular_name' => __('Pizza', 'pizzeria-egidio'),
-            'add_new'       => __('Aggiungi Pizza', 'pizzeria-egidio'),
-            'add_new_item'  => __('Aggiungi Nuova Pizza', 'pizzeria-egidio'),
-            'edit_item'     => __('Modifica Pizza', 'pizzeria-egidio'),
-            'new_item'      => __('Nuova Pizza', 'pizzeria-egidio'),
-            'view_item'     => __('Visualizza Pizza', 'pizzeria-egidio'),
-            'search_items'  => __('Cerca Pizze', 'pizzeria-egidio'),
+            'name'          => __('Piatti', 'pizzeria-egidio'),
+            'singular_name' => __('Piatto', 'pizzeria-egidio'),
+            'add_new'       => __('Aggiungi Piatto', 'pizzeria-egidio'),
+            'add_new_item'  => __('Aggiungi Nuovo Piatto', 'pizzeria-egidio'),
+            'edit_item'     => __('Modifica Piatto', 'pizzeria-egidio'),
+            'new_item'      => __('Nuovo Piatto', 'pizzeria-egidio'),
+            'view_item'     => __('Visualizza piatto', 'pizzeria-egidio'),
+            'search_items'  => __('Cerca piatti', 'pizzeria-egidio'),
         ),
         'public'        => true,
         'has_archive'   => false,
@@ -185,11 +185,11 @@ function pizzeria_egidio_custom_post_types()
         'show_in_rest'  => true,
     ));
 
-    // Tassonomia per Categorie Pizza
-    register_taxonomy('pizza_category', 'pizza', array(
+    // Tassonomia per Categorie piatto
+    register_taxonomy('pizza_category', 'piatto', array(
         'labels' => array(
-            'name'          => __('Categorie Pizza', 'pizzeria-egidio'),
-            'singular_name' => __('Categoria Pizza', 'pizzeria-egidio'),
+            'name'          => __('Categorie piatto', 'pizzeria-egidio'),
+            'singular_name' => __('Categoria piatto', 'pizzeria-egidio'),
         ),
         'public'       => true,
         'hierarchical' => true,
@@ -198,14 +198,14 @@ function pizzeria_egidio_custom_post_types()
 }
 add_action('init', 'pizzeria_egidio_custom_post_types');
 
-// Metabox per dati aggiuntivi delle pizze
+// Metabox per dati aggiuntivi delle piatti
 function pizzeria_egidio_add_pizza_metaboxes()
 {
     add_meta_box(
         'pizza_details',
-        __('Dettagli Pizza', 'pizzeria-egidio'),
+        __('Dettagli piatto', 'pizzeria-egidio'),
         'pizzeria_egidio_pizza_details_callback',
-        'pizza',
+        'piatto',
         'normal',
         'high'
     );
@@ -230,7 +230,7 @@ function pizzeria_egidio_pizza_details_callback($post)
             <td><textarea id="pizza_ingredients" name="pizza_ingredients" rows="3" cols="50"><?php echo esc_textarea($ingredients); ?></textarea></td>
         </tr>
         <tr>
-            <th><label for="pizza_is_special"><?php _e('Pizza Speciale', 'pizzeria-egidio'); ?></label></th>
+            <th><label for="pizza_is_special"><?php _e('piatto Speciale', 'pizzeria-egidio'); ?></label></th>
             <td><input type="checkbox" id="pizza_is_special" name="pizza_is_special" value="1" <?php checked($is_special, 1); ?> /></td>
         </tr>
     </table>
@@ -296,7 +296,7 @@ function pizzeria_egidio_customize_register($wp_customize)
     ));
 
     $wp_customize->add_setting('hero_description', array(
-        'default'           => 'Nel cuore di Piombino, dove la tradizione incontra l\'innovazione per offrirti la pizza più buona e digeribile della città.',
+        'default'           => 'Nel cuore di Piombino, dove la tradizione incontra l\'innovazione per offrirti la piatto più buona e digeribile della città.',
         'sanitize_callback' => 'sanitize_textarea_field',
     ));
 
@@ -534,7 +534,7 @@ add_action('wp_head', 'pizzeria_egidio_customize_css');
 function pizzeria_egidio_get_pizzas($category = '', $limit = -1, $special_only = false)
 {
     $args = array(
-        'post_type'      => 'pizza',
+        'post_type'      => 'piatto',
         'posts_per_page' => $limit,
         'post_status'    => 'publish',
         'orderby'        => 'menu_order',
@@ -621,7 +621,7 @@ function pizzeria_egidio_breadcrumbs()
         echo ' <span class="separator">/</span> <span class="current">' . get_the_title() . '</span>';
     } elseif (is_single()) {
         $post_type = get_post_type();
-        if ($post_type == 'pizza') {
+        if ($post_type == 'piatto') {
             echo ' <span class="separator">/</span> <a href="' . home_url('/menu/') . '">Menu</a>';
         }
         echo ' <span class="separator">/</span> <span class="current">' . get_the_title() . '</span>';
