@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Plugins - Polylang - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-22 07:35:15+0000\n"
+"PO-Revision-Date: 2025-11-16 14:18:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/4.0.1\n"
+"X-Generator: GlotPress/4.0.3\n"
 "Language: it\n"
 "Project-Id-Version: Plugins - Polylang - Stable (latest release)\n"
 
@@ -750,7 +750,7 @@ msgstr "Per far sì che il tuo sito funzioni correttamente devi assegnare una li
 msgid "Content without language"
 msgstr "Contenuto senza lingua"
 
-#: include/license.php:286
+#: include/license.php:293
 msgid "Your license key has been disabled."
 msgstr "La tua chiave di licenza è stata disattivata."
 
@@ -774,7 +774,7 @@ msgid "North Macedonia"
 msgstr "Macedonia del Nord"
 
 #. translators: %1$s is a date, %2$s is link start tag, %3$s is link end tag.
-#: include/license.php:334
+#: include/license.php:341
 msgid "Your license key will expire soon! Precisely, it will expire on %1$s. %2$sRenew your license key today!%3$s"
 msgstr "La scadenza della tua chiave di licenza è vicina! Per la precisione, scadrà il %1$s. %2$sRinnova oggi la tua chiave di licenza%3$s!"
 
@@ -822,16 +822,16 @@ msgstr "WP SYNTEX"
 msgid "Dismiss this notice."
 msgstr "Ignora questa notifica."
 
-#: include/filters.php:432
+#: include/filters.php:435
 msgid "User"
 msgstr "Utente"
 
 #. translators: %s is a language native name
-#: include/filters.php:423
+#: include/filters.php:426
 msgid "User description - %s"
 msgstr "Descrizione dell'utente - %s"
 
-#: include/filters.php:399
+#: include/filters.php:402
 msgid "Translated user descriptions"
 msgstr "Descrizioni utente tradotte"
 
@@ -855,37 +855,37 @@ msgid "Upgrade now."
 msgstr "Aggiorna adesso."
 
 #. translators: %s is a date
-#: include/license.php:342
+#: include/license.php:349
 msgid "Your license key expires on %s."
 msgstr "Il tuo codice di licenza scade il %s."
 
-#: include/license.php:329
+#: include/license.php:336
 msgid "The license key never expires."
 msgstr "Il codice di licenza non ha scadenza."
 
 #. translators: %1$s is link start tag, %2$s is link end tag
-#: include/license.php:317
+#: include/license.php:324
 msgid "Your license key has reached its activation limit. %1$sView possible upgrades%2$s now."
 msgstr "Il tuo codice di licenza ha raggiunto il suo limite di attivazione. %1$sValuta possibili aggiornamenti%2$s ora."
 
 #. translators: %s is a product name
-#: include/license.php:311
+#: include/license.php:318
 msgid "This is not a %s license key."
 msgstr "Questo non è un codice di licenza di %s."
 
 #. translators: %1$s is a product name, %2$s is link start tag, %3$s is link
 #. end tag.
-#: include/license.php:302
+#: include/license.php:309
 msgid "Your %1$s license key is not active for this URL. Please %2$svisit your account page%3$s to manage your license key URLs."
 msgstr "Il tuo codice di licenza di %1$s non è attivo per questo URL. %2$sVai alla pagina del tuo account%3$s per gestire gli URL del tuo codice di licenza."
 
 #. translators: %1$s is link start tag, %2$s is link end tag.
-#: include/license.php:292
+#: include/license.php:299
 msgid "Invalid license. Please %1$svisit your account page%2$s and verify it."
 msgstr "Licenza non valida. %1$sVai alla pagina del tuo account%2$s e verificala."
 
 #. translators: %1$s is a date, %2$s is link start tag, %3$s is link end tag.
-#: include/license.php:277
+#: include/license.php:284
 msgid "Your license key expired on %1$s. Please %2$srenew your license key%3$s."
 msgstr "Il tuo codice di licenza è scaduto il %1$s. Ti chiediamo gentilmente di %2$srinnovare il tuo codice di licenza%3$s."
 
@@ -913,11 +913,11 @@ msgstr "Permetti la condivisione tra le lingue dello stesso slug per articoli e 
 msgid "Share slugs"
 msgstr "Condividi gli slug"
 
-#: install/plugin-updater.php:573
+#: install/plugin-updater.php:574
 msgid "Error"
 msgstr "Errore"
 
-#: install/plugin-updater.php:573
+#: install/plugin-updater.php:574
 msgid "You do not have permission to install plugin updates"
 msgstr "Non sei autorizzato ad installare gli aggiornamenti del plugin"
 
@@ -1010,7 +1010,7 @@ msgstr "Disattivato"
 msgid "Activate this module"
 msgstr "Attiva questo modulo"
 
-#: include/license.php:326 settings/settings-module.php:156
+#: include/license.php:333 settings/settings-module.php:156
 msgid "Deactivate"
 msgstr "Disattiva"
 
@@ -1568,7 +1568,7 @@ msgstr "Kirgistan"
 
 #: settings/flags.php:130
 msgid "Kenya"
-msgstr "Kenia"
+msgstr "Kenya"
 
 #: settings/flags.php:129
 msgid "Japan"

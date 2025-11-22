@@ -5,7 +5,7 @@ Tags: seo, WordPress SEO, google search console, schema, redirection,
 Tested up to: 6.8
 Requires at least: 6.3
 Requires PHP: 7.4
-Stable tag: 1.0.255
+Stable tag: 1.0.258
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -339,11 +339,11 @@ Please drop us an email at support@rankmath.com, and we will be more than happy 
 
 == Changelog ==
 
-= 1.0.255 [Oct 08, 2025] =
-- Added: Option to view and edit SEO Title & Description columns on [Taxonomy Terms lists](https://rankmath.com/kb/titles-and-meta/#bulk-editing-categories) page
-- Fixed: [Keyboard shortcut `//` for opening the Content AI command box](https://rankmath.com/kb/using-content-ai-in-block-editor/#shortcut) was not working
-- Fixed: [Removing the Open Graph Thumbnail from Titles & Meta settings](https://rankmath.com/kb/titles-and-meta/#open-graph-thumbnail) was not working
-- Fixed: PHP warning related to the missing [Phone number type](https://rankmath.com/kb/local-seo/#phone)
-- Fixed: Missing Preview in the [Content AI Prompts library modal](https://rankmath.com/kb/using-content-ai-in-block-editor/#shortcut)
+= 1.0.258 [Nov 19, 2025] =
+- Improved: [Filter to remove global Schema entities](https://rankmath.com/kb/filters-hooks-api-developer/#remove-global-schema-entities) will now work on the taxonomy pages as well
+- Fixed: PHP error on Site editor page
+- Fixed: The [Fix with AI tool](https://rankmath.com/kb/fix-seo-tests-with-content-ai/) for the content tests was not highlighting all the changes
+- Fixed: The Fix with AI tool was not working on non-content tests when the post content is empty
+- Fixed: Missing [Business type option in the Setup wizard](https://rankmath.com/kb/how-to-setup/#business-type) when Small Business type is selected in the Site type
 
 Full changelog can be found here - **[Rank Math changelog](https://rankmath.com/changelog/?utm_source=Plugin&utm_medium=Changelog&utm_campaign=WP)**
