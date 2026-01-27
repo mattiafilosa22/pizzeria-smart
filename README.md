@@ -1,4 +1,4 @@
-# Pizzeria Egidio - WordPress Docker Setup
+# Smart restaurant - WordPress Docker Setup
 
 Questo progetto utilizza Docker Compose per eseguire WordPress 6.8.3 con MySQL e phpMyAdmin in container separati.
 
